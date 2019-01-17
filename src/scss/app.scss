@@ -1,0 +1,18 @@
+@import 'functions';
+@import 'mixins/borders';
+@import 'variables';
+@import 'buttons';
+@import 'typography';
+@import 'grids';
+@import 'form';
+
+@import 'components/cell';
+@import 'components/navbar';
+@import 'views/game';
+
+body {
+    margin: 0;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

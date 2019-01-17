@@ -1,0 +1,19 @@
+.text{
+    &-left {
+        text-align: left;
+    }
+
+    &-center {
+        text-align: center;
+    }
+
+    &-right {
+        text-align: right;
+    }
+}
+
+.is-title{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}

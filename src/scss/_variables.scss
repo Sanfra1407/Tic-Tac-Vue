@@ -1,0 +1,11 @@
+$color_white: #FFFFFF;
+$primary_color: #E74C3C;
+$secondary_color: #4B7BEC;
+
+// Cell
+$cell_width: 150px;
+$cell_height: $cell_width;
+$cell_border: #EEEEEE;
+$toggle_font-size: #{((strip-units($cell_width) / 2) / 10) - 0.25}rem;
+
+$container_width: #{(strip-units($cell_width) * 3)}px;

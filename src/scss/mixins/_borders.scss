@@ -1,0 +1,5 @@
+@mixin light-border($color: #D0D0D0) {
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: $color;
+}
