@@ -2,7 +2,8 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 Vue.use(Vuex);
-const emptyPositions = () => ['', '', '', '', '', '', '', '', ''];
+
+const emptyPositions = () => [null, null, null, null, null, null, null, null, null];
 
 export default new Vuex.Store({
   state: {
@@ -14,7 +15,6 @@ export default new Vuex.Store({
   },
   getters: {
     getMarker: state => index => state.positions[index],
-    hasPlayers: state => state.players,
     getPlayerName: state => state.players ? state.players[state.player] : '',
     getWinnerName: state => state.winner ? state.players[state.winner] : '',
   },
