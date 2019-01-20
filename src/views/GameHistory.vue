@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { mapState } from "vuex";
 import { Title } from "../components/atoms";
 
 export default {
