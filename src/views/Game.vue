@@ -6,18 +6,19 @@
     </div>
     <Footer>
       <div class="col">
-        <h3 style="margin:0; padding:5px 0;font-size:1rem">
+        <h3 class="footer-player">
           <span v-if="winner">
             <strong>{{ getWinnerName }}</strong> wins!
           </span>
-          <span v-else>{{getPlayerName}} plays!</span>
+          <span v-else-if="!winner && this.hasEmptyCells()">{{ getPlayerName }} plays!</span>
+          <span v-else>Draw!</span>
         </h3>
       </div>
       <div class="col">
         <div class="text-right">
           <button
             class="btn btn--primary"
-            v-if="winner"
+            v-if="winner || !this.hasEmptyCells()"
             @click="$store.dispatch('newGame')">
             <span>Play again</span>
           </button>
@@ -42,6 +43,11 @@ export default {
     Footer,
     Title
   },
+  methods: {
+    hasEmptyCells() {
+      return this.positions.filter(position => !!position).length < 9;
+    }
+  },
   computed: {
     ...mapState([
       "player",
@@ -50,11 +56,11 @@ export default {
     ]),
     ...mapGetters([
       "getPlayerName",
-      "getWinnerName"
+      "getWinnerName",
     ]),
   },
   beforeCreate() {
     document.title = "Game";
-  }
+  },
 };
 </script>
