@@ -5,6 +5,7 @@
     cursor: pointer;
     box-sizing: border-box;
     border: 1px solid $cell_border;
+    background-color: $cell_background;
 }
 
 .toggle {
