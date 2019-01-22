@@ -14,6 +14,7 @@ export default new Vuex.Store({
     positions: emptyPositions(),
   },
   getters: {
+    hasPlayers: state => state.players,
     getMarker: state => index => state.positions[index],
     getPlayerName: state => state.players ? state.players[state.player] : '',
     getWinnerName: state => state.winner ? state.players[state.winner] : '',
@@ -26,7 +27,9 @@ export default new Vuex.Store({
       state.player = state.player === 'X' ? 'O' : 'X'
     },
     pushMarker(state, payload) {
-      state.positions[payload.index] = state.player;
+      state.positions = state.positions.map((position, i) => {
+        return payload.index === i ? state.player : position;
+      });
     },
     checkWinning(state, payload) {
       const {positions} = state;
