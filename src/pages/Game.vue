@@ -2,7 +2,7 @@
   <div class="game">
     <Title>Tic Tac Vue</Title>
     <div class="tic-tac">
-      <Cell v-for="(position, i) in positions" :key="i" :index="i" :position="position"/>
+      <Cells :positions="positions" />
     </div>
     <Footer>
       <div class="col">
@@ -31,15 +31,16 @@
 <script>
 import { mapState, mapGetters } from "vuex";
 import { 
-  Cell, 
   Footer,
   Title,
 } from "../components/atoms";
 
+import { Cells } from "../components/molecules";
+
 export default {
   name: "Game",
   components: {
-    Cell,
+    Cells,
     Footer,
     Title
   },
