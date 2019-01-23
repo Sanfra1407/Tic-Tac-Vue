@@ -1,15 +1,15 @@
 <template>
-  <div :class="['cell', position || winner ? 'disabled' : '']" @click="toggleCell(index)">
+  <div :class="['cell', isDisabled ? 'disabled' : '']" @click="toggleCell(index)">
     <span v-if="position" :class="['toggle', activeToggleClass]">{{ position }}</span>
   </div>
 </template>
 
 <script>
 import { 
+  mapState,
   mapActions,
   mapGetters,
-  mapMutations,
-  mapState
+  mapMutations
 } from "vuex";
 
 export default {
@@ -23,6 +23,10 @@ export default {
       type: String,
       required: false,
       default: ""
+    },
+    replay: {
+      type: Boolean,
+      required: true,
     }
   },
   methods: {
@@ -33,7 +37,7 @@ export default {
       "checkWinning"
     ]),
     toggleCell(index) {
-      if (this.winner === null && !this.getMarker(this.index)) {
+      if (! this.isDisabled) {
         this.addMarker({
           index
         });
@@ -50,10 +54,16 @@ export default {
     ...mapGetters([
       "getMarker"
     ]),
+    isDisabled() {
+      return this.position || this.winner || this.replay;
+    },
+    getPosition() {
+      return this.position || this.getMarker(this.index);
+    },
     activeToggleClass() {
-      if (this.getMarker(this.index) === "X") {
+      if (this.getPosition === "X") {
         return "toggle--one";
-      } else if (this.getMarker(this.index) === "O") {
+      } else if (this.getPosition === "O") {
         return "toggle--two";
       }
 
