@@ -18,13 +18,16 @@ export default new Vuex.Store({
     getMarker: state => index => state.positions[index],
     getPlayerName: state => state.players ? state.players[state.player] : '',
     getWinnerName: state => state.winner ? state.players[state.winner] : '',
+    hasEmptyCells: state => {
+      return state.positions.filter(position => !!position).length < 9;
+    }
   },
   mutations: {
     setPlayers(state, payload) {
       state.players = payload;
     },
     changePlayer(state) {
-      state.player = state.player === 'X' ? 'O' : 'X'
+      state.player = state.player === 'X' ? 'O' : 'X';
     },
     pushMarker(state, payload) {
       state.positions = state.positions.map((position, i) => {
@@ -36,21 +39,21 @@ export default new Vuex.Store({
       const {player} = payload;
 
       if (
-        (positions[0] == player && positions[1] == player && positions[2] == player) ||
-        (positions[3] == player && positions[4] == player && positions[5] == player) ||
-        (positions[6] == player && positions[7] == player && positions[8] == player) ||
-        (positions[0] == player && positions[3] == player && positions[6] == player) ||
-        (positions[1] == player && positions[4] == player && positions[7] == player) ||
-        (positions[2] == player && positions[5] == player && positions[8] == player) ||
-        (positions[0] == player && positions[4] == player && positions[8] == player) ||
-        (positions[2] == player && positions[4] == player && positions[6] == player)
+        (positions[0] === player && positions[1] === player && positions[2] === player) ||
+        (positions[3] === player && positions[4] === player && positions[5] === player) ||
+        (positions[6] === player && positions[7] === player && positions[8] === player) ||
+        (positions[0] === player && positions[3] === player && positions[6] === player) ||
+        (positions[1] === player && positions[4] === player && positions[7] === player) ||
+        (positions[2] === player && positions[5] === player && positions[8] === player) ||
+        (positions[0] === player && positions[4] === player && positions[8] === player) ||
+        (positions[2] === player && positions[4] === player && positions[6] === player)
       ) {
         state.winner = player
-        state.gameHistory.push({
+        state.gameHistory.push(Object.freeze({
           winner: state.winner,
           positions: state.positions,
           winnerName: state.players[state.winner]
-        });
+        }));
       }
     },
     flushPositions(state) {
