@@ -1,6 +1,10 @@
 <template>
   <div class="cells">
-    <Cell v-for="(position, i) in positions" :key="i" :index="i" :position="position" />
+    <Cell v-for="(position, i) in positions" 
+          :key="i" :index="i" 
+          :position="position" 
+          :replay="replay"
+    />
   </div>
 </template>
 
@@ -16,6 +20,11 @@ export default {
     positions: {
       type: Array,
       required: true,
+    },
+    replay: {
+      type: Boolean,
+      required: false,
+      default: false,
     }
   },
 }
