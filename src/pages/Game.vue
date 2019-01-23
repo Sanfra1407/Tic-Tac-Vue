@@ -1,9 +1,7 @@
 <template>
   <div class="game">
     <Title>Tic Tac Vue</Title>
-    <div class="tic-tac">
-      <Cells :positions="positions" />
-    </div>
+    <Cells :positions="positions" />
     <Footer>
       <div class="col">
         <h3 class="footer-player">
