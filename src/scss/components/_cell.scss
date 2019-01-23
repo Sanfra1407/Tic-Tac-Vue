@@ -1,3 +1,13 @@
+.cells {
+    width: 450px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid #eeeeee;
+}
+
 .cell{
     float: left;
     width: $cell_width;
