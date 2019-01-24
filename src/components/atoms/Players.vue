@@ -30,7 +30,7 @@
           <button 
             :disabled="!hasPlayers" 
             class="btn btn--secondary" 
-            @click="setPlayers({'O':playerO, 'X':playerX})">Play</button>
+            @click="start({'O':playerO, 'X':playerX})">Play</button>
         </div>
       </div>
     </div>
@@ -55,6 +55,10 @@ export default {
     ...mapMutations([
       "setPlayers"
     ]),
+    start(players) {
+      this.setPlayers(players);
+      this.$router.push({name: 'homepage'});
+    }
   },
   computed: {
     hasPlayers() {
