@@ -30,7 +30,7 @@
           <button 
             :disabled="!hasPlayers" 
             class="btn btn--secondary" 
-            @click="setPlayers({'O':playerO, 'X':playerX})">Next</button>
+            @click="setPlayers({'O':playerO, 'X':playerX})">Play</button>
         </div>
       </div>
     </div>

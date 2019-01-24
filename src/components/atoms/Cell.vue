@@ -1,6 +1,8 @@
 <template>
   <div :class="['cell', isDisabled ? 'disabled' : '']" @click="toggleCell(index)">
-    <span v-if="position" :class="['toggle', activeToggleClass]">{{ position }}</span>
+    <transition name="bounce">
+      <span v-if="position" :class="['toggle', activeToggleClass]">{{ position }}</span>
+    </transition>
   </div>
 </template>
 

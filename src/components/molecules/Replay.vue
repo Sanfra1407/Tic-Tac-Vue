@@ -1,18 +1,20 @@
 <template>
-  <div class="replay-backdrop" v-if="active" @click="$emit('close-replay')">
-    <div class="replay-wrapper">
-      <div class="container">
-        <Cells :positions="game.positions" replay />
-      </div>
-      <Footer>
-        <div class="text-center">
-          <h3 class="footer-player">
-            <strong>{{ game.winnerName }}</strong> won this match!
-          </h3>
+  <transition name="fade">
+    <div class="replay-backdrop" v-if="active" @click="$emit('close-replay')">
+      <div class="replay-wrapper">
+        <div class="container">
+          <Cells :positions="game.positions" replay />
         </div>
-      </Footer>
+        <Footer>
+          <div class="text-center">
+            <h3 class="footer-player">
+              <strong>{{ game.winnerName }}</strong> won this match!
+            </h3>
+          </div>
+        </Footer>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
