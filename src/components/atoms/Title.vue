@@ -1,9 +1,11 @@
 <template functional>
-  <div class="container">
-    <h1 class="is-title text-center">
-      <span v-if="props.label">{{ props.label }}</span>
-      <slot v-else></slot>
-    </h1>
+  <div class="page-title">
+    <div class="container">
+      <h1 class="is-title text-center">
+        <span v-if="props.label">{{ props.label }}</span>
+        <slot v-else></slot>
+      </h1>
+    </div>
   </div>
 </template>
 
