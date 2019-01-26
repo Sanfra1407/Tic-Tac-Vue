@@ -1,0 +1,30 @@
+.cell{
+  float: left;
+  width: $cell_width;
+  height: $cell_height;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid $cell_border;
+  background-color: $cell_background;
+
+  &--toggle {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    display: block;
+    font-size: $toggle_font-size;
+    user-select: none;
+    
+    &-one {
+      color: $primary_color;
+    }
+
+    &-two {
+      color: $secondary_color;
+    }
+  }
+
+  &--disabled {
+    cursor: not-allowed !important;
+  }
+}
