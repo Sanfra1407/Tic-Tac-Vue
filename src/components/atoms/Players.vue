@@ -26,7 +26,7 @@
             placeholder="Insert player name"
           >
         </div>
-        <div class="next text-center">
+        <div class="next text--center">
           <button 
             :disabled="!hasPlayers" 
             class="btn btn--secondary" 

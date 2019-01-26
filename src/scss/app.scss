@@ -7,9 +7,13 @@
 @import 'grids';
 @import 'form';
 
-@import 'components/cell';
-@import 'components/navbar';
-@import 'components/footer';
+@import 'atoms/cell';
+@import 'atoms/navbar';
+@import 'atoms/games';
+@import 'atoms/footer';
+
+@import 'components/cells';
+@import 'components/replay';
 
 body {
   margin: 0;

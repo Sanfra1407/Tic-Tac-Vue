@@ -1,7 +1,7 @@
 <template>
-  <div :class="['cell', isDisabled ? 'disabled' : '']" @click="toggleCell(index)">
+  <div :class="['cell', isDisabled ? 'cell--disabled' : '']" @click="toggleCell(index)">
     <transition name="bounce">
-      <span v-if="position" :class="['toggle', activeToggleClass]">{{ position }}</span>
+      <span v-if="position" :class="['cell--toggle', activeToggleClass]">{{ position }}</span>
     </transition>
   </div>
 </template>
@@ -64,9 +64,9 @@ export default {
     },
     activeToggleClass() {
       if (this.getPosition === "X") {
-        return "toggle--one";
+        return "cell--toggle-one";
       } else if (this.getPosition === "O") {
-        return "toggle--two";
+        return "cell--toggle-two";
       }
 
       return null;

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="page" v-if="hasPlayers">
-      <Navbar/>
-      <router-view/>
+    <div class="page-wrapper" v-if="hasPlayers">
+      <Navbar />
+      <router-view />
     </div>
     <Players v-else />
   </div>

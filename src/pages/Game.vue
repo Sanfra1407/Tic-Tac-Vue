@@ -1,10 +1,10 @@
 <template>
-  <div class="game">
+  <div class="page-game">
     <Title>Tic Tac Vue</Title>
     <Cells :positions="positions" />
     <Footer>
       <div class="col">
-        <h3 class="footer-player">
+        <h3 class="footer__player">
           <span v-if="winner">
             <strong>{{ getWinnerName }}</strong> wins!
           </span>

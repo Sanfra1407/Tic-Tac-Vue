@@ -1,13 +1,13 @@
 <template>
   <transition name="fade">
-    <div class="replay-backdrop" v-if="active" @click="$emit('close-replay')">
-      <div class="replay-wrapper">
+    <div class="replay__backdrop" v-if="active" @click="$emit('close-replay')">
+      <div class="replay__wrapper">
         <div class="container">
           <Cells :positions="game.positions" replay />
         </div>
         <Footer>
-          <div class="text-center">
-            <h3 class="footer-player">
+          <div class="text--center">
+            <h3 class="footer__player">
               <strong>{{ game.winnerName }}</strong> won this match!
             </h3>
           </div>
@@ -46,33 +46,12 @@ export default {
     }
   },
   mounted() {
-    document.querySelector('.game-history').addEventListener('keydown', this._keyPressListener);
+    document.querySelector('.page-game-history')
+            .addEventListener('keydown', this._keyPressListener);
   },
   destroyed() {
-    document.querySelector('.game-history').removeEventListener('keydown', this._keyPressListener);
+    document.querySelector('.page-game-history')
+            .removeEventListener('keydown', this._keyPressListener);
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .replay {
-    &-backdrop {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1000;
-      position: fixed;
-      background-color: rgba(#000000, 0.7);
-    }
-
-    &-wrapper {
-      padding: 25px 0;
-      max-width: 600px;
-      margin-top: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      background-color: #FFFFFF;
-    }
-  }
-</style>
