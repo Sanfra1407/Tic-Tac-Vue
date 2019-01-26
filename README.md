@@ -5,6 +5,7 @@
 * [Methodologies](#methodologies)
 * [Technical skills](#technical-skills)
 * [Install](#install)
+* [Usage](#usage)
 
 ## Methodologies
 In this project I adopted two methodologies I currently use in [MotorK](https://www.motork.io/) (the company I work with) to have a better factored code and organized source files: BEM and Atomic Design.
@@ -48,17 +49,20 @@ You can install **Tic-Tac-Vue** cloning the project:
 git clone https://github.com/Sanfra1407/tic-tac-vue.git
 ```
 
-### Start dev server
+## Usage
+Since this project has been developed with the amazing [Vue-CLI](https://cli.vuejs.org/), you can use its own integrated CLI commands to serve or build the application.
+
+#### Start dev server
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 ```
 npm run lint
 ```
