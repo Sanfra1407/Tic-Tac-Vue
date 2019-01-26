@@ -19,12 +19,15 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import { Title, Score } from "../components/atoms";
-import { Replay } from "../components/molecules";
+import { mapState } from 'vuex';
+import { 
+  Title, 
+  Score,
+} from '../components/atoms';
+import { Replay } from '../components/molecules';
 
 export default {
-  name: "GameHistory",
+  name: 'GameHistory',
   data() {
     return {
       replayActive: false, 
@@ -34,11 +37,11 @@ export default {
   components: {
     Title,
     Score,
-    Replay
+    Replay,
   },
   computed: {
     ...mapState([
-      "gameHistory"
+      'gameHistory'
     ]),
   },
   methods: {
@@ -48,7 +51,7 @@ export default {
     }
   },
   beforeCreate() {
-    document.title = "Game history";
+    document.title = 'Game history';
   }
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="page-game">
-    <Title>Tic Tac Vue</Title>
+    <Title>Game</Title>
     <Cells :positions="positions" />
     <Footer>
       <div class="col">
@@ -13,7 +13,7 @@
         </h3>
       </div>
       <div class="col">
-        <div class="text-right">
+        <div class="text--right">
           <button
             class="btn btn--primary"
             v-if="winner || !hasEmptyCells"
@@ -27,16 +27,20 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { 
+  mapState,
+  mapGetters,
+} from 'vuex';
+
 import { 
   Footer,
   Title,
-} from "../components/atoms";
+} from '../components/atoms';
 
-import { Cells } from "../components/molecules";
+import { Cells } from '../components/molecules';
 
 export default {
-  name: "Game",
+  name: 'Game',
   components: {
     Cells,
     Footer,
@@ -44,18 +48,18 @@ export default {
   },
   computed: {
     ...mapState([
-      "player",
-      "winner",
-      "positions",
+      'player',
+      'winner',
+      'positions',
     ]),
     ...mapGetters([
-      "getPlayerName",
-      "getWinnerName",
-      "hasEmptyCells"
+      'getPlayerName',
+      'getWinnerName',
+      'hasEmptyCells',
     ]),
   },
   beforeCreate() {
-    document.title = "Game";
+    document.title = 'Game';
   },
 };
 </script>

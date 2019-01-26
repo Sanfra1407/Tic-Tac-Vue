@@ -9,20 +9,24 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex";
+import { 
+  mapState, 
+  mapGetters 
+} from 'vuex';
+
 import { 
   Navbar,
-  Players
-} from "./components/atoms/";
+  Players,
+} from './components/atoms/';
 
 export default {
   components: {
     Navbar,
-    Players
+    Players,
   },
   computed: {
     ...mapState([
-      "gameHistory"
+      'gameHistory'
     ]),
     ...mapGetters([
       'hasPlayers'
@@ -32,5 +36,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/app.scss";
+@import 'src/scss/app.scss';
 </style>

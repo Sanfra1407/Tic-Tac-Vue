@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   computed: mapState({
     hasGameHistory: state => state.gameHistory.length
   })

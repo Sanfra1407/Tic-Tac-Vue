@@ -12,10 +12,10 @@ import {
   mapActions,
   mapGetters,
   mapMutations
-} from "vuex";
+} from 'vuex';
 
 export default {
-  name: "Cell",
+  name: 'Cell',
   props: {
     index: {
       type: Number,
@@ -24,7 +24,7 @@ export default {
     position: {
       type: String,
       required: false,
-      default: ""
+      default: ''
     },
     replay: {
       type: Boolean,
@@ -33,10 +33,10 @@ export default {
   },
   methods: {
     ...mapActions([
-      "addMarker"
+      'addMarker'
     ]),
     ...mapMutations([
-      "checkWinning"
+      'checkWinning'
     ]),
     toggleCell(index) {
       if (! this.isDisabled) {
@@ -51,10 +51,10 @@ export default {
   },
   computed: {
     ...mapState([
-      "winner"
+      'winner'
     ]),
     ...mapGetters([
-      "getMarker"
+      'getMarker'
     ]),
     isDisabled() {
       return this.position || this.winner || this.replay;
@@ -63,10 +63,10 @@ export default {
       return this.position || this.getMarker(this.index);
     },
     activeToggleClass() {
-      if (this.getPosition === "X") {
-        return "cell--toggle-one";
-      } else if (this.getPosition === "O") {
-        return "cell--toggle-two";
+      if (this.getPosition === 'X') {
+        return 'cell--toggle-one';
+      } else if (this.getPosition === 'O') {
+        return 'cell--toggle-two';
       }
 
       return null;
