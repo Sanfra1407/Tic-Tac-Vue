@@ -1,12 +1,30 @@
 {
   "name": "tic-tac-vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Giuseppe Sanfrancesco (https://www.giuseppesanfrancesco.it/)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "keywords": [
+    "vue",
+    "vuex",
+    "vue router",
+    "javascript",
+    "es6",
+    "spa",
+    "single page application",
+    "tic-tac-toe",
+    "tic tac toe",
+    "tic-tac-vue",
+    "tic tac vue",
+    "game",
+    "learning",
+    "BEM",
+    "SCSS",
+    "Atomic Design"
+  ],
   "dependencies": {
     "vue": "^2.5.21",
     "vue-router": "^3.0.2",
