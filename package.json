@@ -1,7 +1,7 @@
 {
   "name": "tic-tac-vue",
   "version": "0.1.0",
-  "private": true,
+  "author": "Giuseppe Sanfrancesco (https://www.giuseppesanfrancesco.it/)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
