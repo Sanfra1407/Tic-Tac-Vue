@@ -1,5 +1,6 @@
 .cell{
-  float: left;
+  flex-grow: 3;
+  display: flex;
   width: $cell_width;
   height: $cell_height;
   cursor: pointer;

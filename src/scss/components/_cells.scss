@@ -1,6 +1,8 @@
 .cells {
   width: 450px;
   height: 450px;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
