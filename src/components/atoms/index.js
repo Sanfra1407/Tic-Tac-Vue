@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Title from './Title';
 import Players from './Players';
+import Score from './Score';
 
 export {
   Cell,
@@ -10,4 +11,5 @@ export {
   Footer,
   Title,
   Players,
+  Score,
 }
