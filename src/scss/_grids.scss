@@ -16,9 +16,13 @@
 .flex {
   &-container {
     display: flex;
+
+    &--players {
+      height: 100vh;
+    }
   }
 
-  &-v-centered {
+  &--v-centered {
     align-self: center;
   }
 }
