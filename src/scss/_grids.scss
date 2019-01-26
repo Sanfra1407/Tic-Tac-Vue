@@ -1,24 +1,24 @@
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: $container_width;
+  margin-left: auto;
+  margin-right: auto;
+  width: $container_width;
 }
 
 .col {
-    width: 50%;
-    float: left;
+  width: 50%;
+  float: left;
 }
 
 .full-width {
-    width: 100%;
+  width: 100%;
 }
 
 .flex {
-    &-container {
-        display: flex;
-    }
+  &-container {
+    display: flex;
+  }
 
-    &-v-centered {
-        align-self: center;
-    }
+  &-v-centered {
+    align-self: center;
+  }
 }
