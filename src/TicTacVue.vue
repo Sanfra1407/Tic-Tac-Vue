@@ -14,12 +14,11 @@ import {
   mapGetters 
 } from 'vuex';
 
-import { 
-  Navbar,
-  Players,
-} from './components/atoms/';
+import { Navbar } from './components/atoms/';
+import { Players, } from './components/molecules/';
 
 export default {
+  name: 'TicTacVue',
   components: {
     Navbar,
     Players,
