@@ -2,7 +2,7 @@
   font-size: 1rem;
   padding: 6px 10px;
   border-radius: 2px;
-  color: $color_white;
+  color: $color-white;
   outline: none;
   cursor: pointer;
 
@@ -12,12 +12,12 @@
   }
 
   &--primary {
-    border-color: $primary_color;
-    background-color: $primary_color;
+    border-color: $primary-color;
+    background-color: $primary-color;
   }
 
   &--secondary {
-    border-color: $secondary_color;
-    background-color: $secondary_color;
+    border-color: $secondary-color;
+    background-color: $secondary-color;
   }
 }
