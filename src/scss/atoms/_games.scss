@@ -5,7 +5,7 @@
   .game {
     padding: 7px;
     list-style-type: none;
-    border: 1px solid #eee;
+    border: 1px solid $color_light_grey;
   
     + .game {
       border-top: 0;
