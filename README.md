@@ -48,6 +48,10 @@ You can install **Tic-Tac-Vue** cloning the project:
 ```
 git clone https://github.com/Sanfra1407/tic-tac-vue.git
 ```
+then install npm dependencies:
+```
+npm install
+```
 
 ## Usage
 Since this project has been developed with the amazing [Vue-CLI](https://cli.vuejs.org/), you can use its own integrated CLI commands to serve or build the application.
