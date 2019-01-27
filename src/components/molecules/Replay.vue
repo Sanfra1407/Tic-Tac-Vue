@@ -1,10 +1,8 @@
 <template>
   <transition name="fade">
-    <div class="replay__backdrop" v-if="active" @click="$emit('close-replay')">
-      <div class="replay__wrapper">
-        <div class="container">
-          <Cells :positions="game.positions" replay />
-        </div>
+    <div class="replay__backdrop flex-container flex-container--100vh" v-if="active" @click="$emit('close-replay')">
+      <div class="replay__wrapper flex--v-centered">
+        <Cells :positions="game.positions" replay />
         <Footer>
           <div class="text--center">
             <h3 class="footer__player">
