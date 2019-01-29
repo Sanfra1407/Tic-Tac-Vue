@@ -14,12 +14,12 @@ Click [here](https://kxrw66o785.codesandbox.io/) to try the online demo version.
 ## Methodologies
 In this project I adopted two methodologies I currently use in [MotorK](https://www.motork.io/) (the company I work with) to have a better factored code and organized source files: BEM and Atomic Design.
 ### BEM
-**BEM** (which means Block Element Modifier) is a methodology that helps you to create reusable components in front-end development. It's all about splitting your CSS classes using in **Blocks**, **Elements** and **Modifiers**. The final DOM could be very verbose, but you will have a better factored source code and, because of you don't have to nest CSS classes, your CSS bundle will result less heavy.
+**BEM** (which means Block Element Modifier) is a methodology that helps you to create reusable components in front-end development. It's all about splitting your CSS classes using **Blocks**, **Elements** and **Modifiers**. The final DOM could be verbose, but you will have a better factored source code and, because of you don't have to nest CSS classes, your CSS bundle will result less heavy.
 
 To read more about BEM pattern, click [here](http://getbem.com/naming/).
 ### Atomic Design
 **Atomic Design** is a methodology for creating design systems.
-Similarly to chemistry, you can organize your components file (in this scenario Vue Single File Components) using **atoms**, **molecules** and **organisms**
+Similarly to chemistry, you can organize your components file (in this scenario Vue Single File Components) using **atoms**, **molecules** and **organisms**.
 #### Atoms
 Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
 #### Molecules
