@@ -44,11 +44,11 @@ export default {
     }
   },
   mounted() {
-    document.querySelector('.page-game-history')
+    document.querySelector('body')
             .addEventListener('keydown', this._keyPressListener);
   },
   destroyed() {
-    document.querySelector('.page-game-history')
+    document.querySelector('body')
             .removeEventListener('keydown', this._keyPressListener);
   }
 }
