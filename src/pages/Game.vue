@@ -14,12 +14,14 @@
       </div>
       <div class="col">
         <div class="text--right">
-          <button
-            class="btn btn--primary"
-            v-if="winner || !hasEmptyCells"
-            @click="$store.dispatch('newGame')">
-            <span>Play again</span>
-          </button>
+          <transition name="bounce">
+            <button
+              class="btn btn--primary"
+              v-if="winner || !hasEmptyCells"
+              @click="$store.dispatch('newGame')">
+              <span>Play again</span>
+            </button>
+          </transition>
         </div>
       </div>
     </Footer>
