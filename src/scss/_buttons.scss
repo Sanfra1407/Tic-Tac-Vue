@@ -5,6 +5,8 @@
   color: $color-white;
   outline: none;
   cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
 
   &[disabled="disabled"] {
     opacity: 0.8;

@@ -4,6 +4,7 @@
   width: $cell_width;
   height: $cell_height;
   cursor: pointer;
+  user-select: none;
   box-sizing: border-box;
   border: 1px solid $cell_border;
   background-color: $cell_background;
