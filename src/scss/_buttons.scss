@@ -13,11 +13,27 @@
     cursor: not-allowed;
   }
 
+  &--small {
+    padding: 3px 6px;
+  }
+
   &--primary {
     @include border-background($primary-color)
   }
 
   &--secondary {
     @include border-background($secondary-color)
+  }
+
+  &--golden {
+    color: $color-dark;
+    @include border-background($golden-color);
+
+    &:hover {
+      &::after {
+        content: '';
+        color: red;
+      }
+    }
   }
 }
