@@ -4,7 +4,9 @@
       <span>Winner: <strong>{{ game.winnerName }}</strong></span>
     </div>
     <div class="game__cta">
-      <button class="btn btn--secondary" @click="openReplay(game)">Replay</button>
+      <button 
+        :class="['btn', isGoldenWin ? 'btn--golden' : 'btn--secondary']" 
+        @click="openReplay(game)">Replay</button>
     </div>
   </li>
 </template>
@@ -20,6 +22,11 @@ export default {
     openReplay: {
       type: Function,
       required: true,
+    }
+  },
+  computed: {
+    isGoldenWin() {
+      return this.game.isGoldenWin;
     }
   }
 }

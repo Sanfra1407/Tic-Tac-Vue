@@ -20,6 +20,9 @@ export default new Vuex.Store({
     getWinnerName: state => state.winner ? state.players[state.winner] : '',
     hasEmptyCells: state => {
       return state.positions.filter(position => !!position).length < 9;
+    },
+    hasGoldenWins: state => {
+      return state.gameHistory.filter(game => game.isGoldenWin).length > 0;
     }
   },
   mutations: {
@@ -35,8 +38,8 @@ export default new Vuex.Store({
       });
     },
     checkWinning(state, payload) {
-      const {positions} = state;
-      const {player} = payload;
+      const { positions } = state;
+      const { player } = payload;
 
       if (
         (positions[0] === player && positions[1] === player && positions[2] === player) ||
@@ -52,7 +55,8 @@ export default new Vuex.Store({
         state.gameHistory.push(Object.freeze({
           winner: state.winner,
           positions: state.positions,
-          winnerName: state.players[state.winner]
+          winnerName: state.players[state.winner],
+          isGoldenWin: state.positions.filter(position => !!position).length === 5,
         }));
       }
     },
