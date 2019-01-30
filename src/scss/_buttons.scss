@@ -14,12 +14,10 @@
   }
 
   &--primary {
-    border-color: $primary-color;
-    background-color: $primary-color;
+    @include border-background($primary-color)
   }
 
   &--secondary {
-    border-color: $secondary-color;
-    background-color: $secondary-color;
+    @include border-background($secondary-color)
   }
 }
