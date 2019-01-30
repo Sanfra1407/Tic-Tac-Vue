@@ -4,12 +4,20 @@
   width: $container-width;
 }
 
-.col {
-  width: 50%;
-  float: left;
+.row {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.full-width {
+.col {
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.is-full-width {
   width: 100%;
 }
 
