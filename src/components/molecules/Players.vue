@@ -3,7 +3,7 @@
     <div class="flex-container flex-container--100vh">
       <div class="flex--v-centered">
         <Title>Tic-Tac-Vue - Insert players</Title>
-        <div class="form players full-width">
+        <div class="form players is-full-width">
           <div class="player">
             <label for="player-x" class="form__label">
               <strong>Player X</strong>
