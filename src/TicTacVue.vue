@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="tic-tac-vue">
     <div class="page-wrapper" v-if="hasPlayers">
       <Navbar />
       <router-view />
