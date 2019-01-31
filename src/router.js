@@ -7,7 +7,7 @@ const GameHistory = () => import('./pages/GameHistory.vue');
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history', // Prevents /# in the URL. Being a pure Vue application, /# is useless.
+  //mode: 'history', // Prevents /# in the URL.
   routes: [
     {
       path: '/',
