@@ -1,7 +1,7 @@
 # Tic-Tac-Vue
 **Tic-Tac-Vue** is a simple JavaScript Single Page Application (SPA) written with [Vue](https://vuejs.org/v2/guide/index.html), [Vuex](https://vuex.vuejs.org/) and [Vue Router](https://router.vuejs.org/). Its goal is to be a "case study" for beginners who want to learn Vue and its powerful ecosystem.
 
-Click [here](https://kxrw66o785.codesandbox.io/) to try the online demo version.
+Click [here](https://testal.app/tic-tac-vue/) to try the online demo version.
 
 ![](tic-tac-vue.gif)
 
