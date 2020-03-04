@@ -88,6 +88,12 @@ export default {
 
   beforeCreate() {
     document.title = 'Game history';
+  },
+
+  created() {
+    if(this.gameHistory.length === 0) {
+      this.$router.push({ name: 'homepage' });
+    }
   }
 };
 </script>
