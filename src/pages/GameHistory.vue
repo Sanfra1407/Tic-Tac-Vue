@@ -34,11 +34,10 @@ import {
   mapState, 
   mapGetters
 } from 'vuex';
-import { 
-  Title, 
-  Score,
-} from '../components/atoms';
-import { Replay } from '../components/molecules';
+
+import Title from '../components/atoms/Title';
+import Score from '../components/atoms/Score';
+import Replay from '../components/molecules/Replay';
 
 export default {
   name: 'GameHistory',

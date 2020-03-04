@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import { Cells } from './';
-import { Footer } from '../atoms';
+import Cells from './Cells';
+import Footer from '../atoms/Footer';
 
 export default {
   name: 'Replay',
