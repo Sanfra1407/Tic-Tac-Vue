@@ -24,6 +24,7 @@ export default {
       required: true,
     }
   },
+  
   computed: {
     isGoldenWin() {
       return this.game.isGoldenWin;

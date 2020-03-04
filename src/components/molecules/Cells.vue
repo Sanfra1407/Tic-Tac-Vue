@@ -16,6 +16,7 @@ export default {
   components: {
     Cell
   },
+  
   props: {
     positions: {
       type: Array,

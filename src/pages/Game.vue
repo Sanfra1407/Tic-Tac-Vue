@@ -47,18 +47,21 @@ export default {
     Footer,
     Title
   },
+
   computed: {
     ...mapState([
       'player',
       'winner',
       'positions',
     ]),
+
     ...mapGetters([
       'getPlayerName',
       'getWinnerName',
       'hasEmptyCells',
     ]),
   },
+  
   beforeCreate() {
     document.title = 'Game';
   },

@@ -25,6 +25,7 @@ export default {
     Cells,
     Footer,
   },
+
   props: {
     active: {
       type: Boolean,
@@ -36,6 +37,7 @@ export default {
       required: true,
     }
   },
+
   methods: {
     _keyPressListener (e) {
       if (e.keyCode === 27) {
@@ -43,10 +45,12 @@ export default {
       }
     }
   },
+
   mounted() {
     document.querySelector('body')
             .addEventListener('keydown', this._keyPressListener);
   },
+  
   destroyed() {
     document.querySelector('body')
             .removeEventListener('keydown', this._keyPressListener);

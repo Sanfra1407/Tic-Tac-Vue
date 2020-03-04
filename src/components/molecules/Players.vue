@@ -51,29 +51,35 @@ export default {
   components: {
     Title
   },
+
   data() {
     return {
       playerO: '',
       playerX: ''
     };
   },
+
+  computed: {
+    hasPlayers() {
+      return this.playerO && this.playerX;
+    },
+
+    buttonValue() {
+      return this.hasPlayers ? 'Play' : 'Fill out the form'
+    },
+  },
+
   methods: {
     ...mapMutations([
       'setPlayers'
     ]),
+    
     start(players) {
       this.setPlayers(players);
       this.$router.push({name: 'homepage'});
     }
   },
-  computed: {
-    hasPlayers() {
-      return this.playerO && this.playerX;
-    },
-    buttonValue() {
-      return this.hasPlayers ? 'Play' : 'Fill out the form'
-    },
-  },
+
   mounted() {
     document.title = 'Players';
   },

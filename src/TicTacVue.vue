@@ -23,6 +23,7 @@ export default {
     Navbar,
     Players,
   },
+  
   computed: {
     ...mapState([
       'gameHistory'

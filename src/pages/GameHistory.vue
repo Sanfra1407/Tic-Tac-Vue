@@ -41,6 +41,12 @@ import Replay from '@molecules/Replay';
 
 export default {
   name: 'GameHistory',
+  components: {
+    Title,
+    Score,
+    Replay,
+  },
+
   data() {
     return {
       replayActive: false, 
@@ -48,33 +54,34 @@ export default {
       showOnlyGoldenWin: false,
     }
   },
-  components: {
-    Title,
-    Score,
-    Replay,
-  },
+  
   computed: {
     ...mapState([
       'gameHistory',
     ]),
+    
     ...mapGetters([
       'hasGoldenWins',
     ]),
+
     games() {
       return this.showOnlyGoldenWin ? 
         this.gameHistory.filter(game => game.isGoldenWin) : 
         this.gameHistory;
     }
   },
+
   methods: {
     openReplay(game) {
       this.replayActive = true;
       this.selectedGame = game;
     },
+
     filterGames() {
       this.showOnlyGoldenWin = !this.showOnlyGoldenWin;
     }
   },
+
   beforeCreate() {
     document.title = 'Game history';
   }

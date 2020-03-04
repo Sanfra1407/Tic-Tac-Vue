@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Game from './pages/Game.vue';
+import Game from './pages/Game';
 
-const GameHistory = () => import('./pages/GameHistory.vue');
+const GameHistory = () => import('./pages/GameHistory');
 
 Vue.use(Router)
 

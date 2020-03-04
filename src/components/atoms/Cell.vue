@@ -31,46 +31,53 @@ export default {
       required: true,
     }
   },
+
+  computed: {
+    ...mapState([
+      'winner'
+    ]),
+
+    ...mapGetters([
+      'getMarker'
+    ]),
+
+    isDisabled() {
+      return this.position || this.winner || this.replay;
+    },
+
+    getPosition() {
+      return this.position || this.getMarker(this.index);
+    },
+    
+    activeToggleClass() {
+      if (this.getPosition === 'X') {
+        return 'cell--toggle-one';
+      } 
+      else if (this.getPosition === 'O') {
+        return 'cell--toggle-two';
+      }
+
+      return null;
+    }
+  },
+
   methods: {
     ...mapActions([
       'addMarker'
     ]),
+
     ...mapMutations([
       'checkWinning'
     ]),
+
     toggleCell(index) {
       if (! this.isDisabled) {
-        this.addMarker({
-          index
-        });
+        this.addMarker({ index });
         this.checkWinning({
           player: this.getMarker(this.index)
         });
       }
     }
   },
-  computed: {
-    ...mapState([
-      'winner'
-    ]),
-    ...mapGetters([
-      'getMarker'
-    ]),
-    isDisabled() {
-      return this.position || this.winner || this.replay;
-    },
-    getPosition() {
-      return this.position || this.getMarker(this.index);
-    },
-    activeToggleClass() {
-      if (this.getPosition === 'X') {
-        return 'cell--toggle-one';
-      } else if (this.getPosition === 'O') {
-        return 'cell--toggle-two';
-      }
-
-      return null;
-    }
-  }
 };
 </script>
