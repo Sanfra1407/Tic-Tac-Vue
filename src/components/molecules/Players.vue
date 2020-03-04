@@ -76,7 +76,7 @@ export default {
     
     start(players) {
       this.setPlayers(players);
-      this.$router.push({name: 'homepage'});
+      this.$forceUpdate();
     }
   },
 
