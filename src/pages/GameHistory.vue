@@ -2,7 +2,7 @@
   <div class="page-game-history">
     <Title>Game history</Title>
     <div class="container">
-      <div class="row" v-if="hasGoldenWins">
+      <div class="row" v-if="showGoldenWins">
         <div class="text--left col">
           <button class="btn btn--primary btn--small is-full-width" @click="filterGames">
             <span v-if="showOnlyGoldenWin">Show all</span>
@@ -63,6 +63,10 @@ export default {
     ...mapGetters([
       'hasGoldenWins',
     ]),
+
+    showGoldenWins() {
+      return this.hasGoldenWins && this.gameHistory.length > 1;
+    },
 
     games() {
       return this.showOnlyGoldenWin ? 
