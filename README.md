@@ -12,7 +12,7 @@ Click [here](https://testal.app/tic-tac-vue/) to try the online demo version.
 * [Usage](#usage)
 
 ## Methodologies
-In this project I adopted two methodologies I currently use in [MotorK](https://www.motork.io/) (the company I work with) to have a better factored code and organized source files: BEM and Atomic Design.
+In this project I adopted two methodologies I currently use in [MotorK](https://www.motork.io/) (the company I've been working with) to have a better factored code and organized source files: BEM and Atomic Design.
 ### BEM
 **BEM** (which means Block Element Modifier) is a methodology that helps you to create reusable components in front-end development. It's all about splitting your CSS classes using **Blocks**, **Elements** and **Modifiers**. The final DOM could be verbose, but you will have a better factored source code and, because of you don't have to nest CSS classes, your CSS bundle will result less heavy.
 
