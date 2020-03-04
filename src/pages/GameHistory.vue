@@ -35,9 +35,9 @@ import {
   mapGetters
 } from 'vuex';
 
-import Title from '../components/atoms/Title';
-import Score from '../components/atoms/Score';
-import Replay from '../components/molecules/Replay';
+import Title from '@atoms/Title';
+import Score from '@atoms/Score';
+import Replay from '@molecules/Replay';
 
 export default {
   name: 'GameHistory',

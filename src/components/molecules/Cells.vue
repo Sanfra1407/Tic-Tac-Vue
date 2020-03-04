@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Cell from '../atoms/Cell';
+import Cell from '@atoms/Cell';
 
 export default {
   name: 'Cells',

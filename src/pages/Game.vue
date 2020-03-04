@@ -36,9 +36,9 @@ import {
   mapGetters,
 } from 'vuex';
 
-import Title from '../components/atoms/Title';
-import Footer from '../components/atoms/Footer';
-import Cells from '../components/molecules/Cells';
+import Title from '@atoms/Title';
+import Footer from '@atoms/Footer';
+import Cells from '@molecules/Cells';
 
 export default {
   name: 'Game',
