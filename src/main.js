@@ -1,7 +1,7 @@
 import Vue from "vue";
-import TicTacVue from "./TicTacVue.vue";
 import router from "./router";
 import store from "./store";
+import TicTacVue from "./TicTacVue";
 
 Vue.config.productionTip = false;
 
