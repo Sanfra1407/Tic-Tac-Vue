@@ -1,10 +1,14 @@
 <template>
   <div id="tic-tac-vue">
-    <div class="page-wrapper" v-if="hasPlayers">
-      <Navbar />
-      <router-view />
-    </div>
-    <Players v-else />
+    <transition name="fade" mode="out-in" :duration=120>
+      <div class="page-wrapper" v-if="hasPlayers">
+        <Navbar />
+        <transition name="fade" mode="out-in" :duration=120>
+          <router-view />
+        </transition>
+      </div>
+      <Players v-else />
+    </transition>
   </div>
 </template>
 
