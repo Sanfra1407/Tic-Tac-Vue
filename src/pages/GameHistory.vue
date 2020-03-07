@@ -10,7 +10,7 @@
           </button>
         </div>
         <div class="text--right col">
-          <small class="is-italic">*Match with only 5 moves</small>
+          <small v-if="!showOnlyGoldenWin" class="is-italic">*Match with only 5 moves</small>
         </div>
       </div>
       <ul class="games">
@@ -65,12 +65,18 @@ export default {
     ]),
 
     showGoldenWins() {
-      return this.hasGoldenWins && this.gameHistory.length > 1;
+      return this.hasGoldenWins 
+        && this.gameHistory.length > 1
+        && this.gameHistory.length > this.getGoldenWins.length;
+    },
+
+    getGoldenWins() {
+      return this.gameHistory.filter(game => game.isGoldenWin);
     },
 
     games() {
       return this.showOnlyGoldenWin ? 
-        this.gameHistory.filter(game => game.isGoldenWin) : 
+        this.getGoldenWins : 
         this.gameHistory;
     }
   },
