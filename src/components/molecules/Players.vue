@@ -30,8 +30,8 @@
           </div>
           <div class="next text--center">
             <button 
-              :disabled="!hasPlayers" 
-              class="btn btn--secondary" 
+              :disabled="!hasPlayers || invalidPlayers" 
+              :class="`btn ${hasPlayers && invalidPlayers ? 'btn--error' : 'btn--secondary'}`" 
               @click="start({'O':playerO, 'X':playerX})">
             {{ buttonValue }}  
             </button>
@@ -64,8 +64,16 @@ export default {
       return this.playerO && this.playerX;
     },
 
+    invalidPlayers() {
+      return this.playerO === this.playerX;
+    },
+
     buttonValue() {
-      return this.hasPlayers ? 'Play' : 'Fill out the form'
+      if(this.hasPlayers && this.invalidPlayers) {
+        return 'Players must have different names!';
+      }
+
+      return this.hasPlayers ? 'Play' : 'Insert players names';
     },
   },
 
