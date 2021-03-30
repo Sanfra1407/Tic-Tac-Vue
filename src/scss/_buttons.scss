@@ -17,7 +17,8 @@
     padding: 3px 6px;
   }
 
-  &--primary {
+  &--primary,
+  &--error {
     @include border-background($primary-color)
   }
 
