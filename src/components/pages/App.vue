@@ -18,8 +18,8 @@ import {
   mapGetters 
 } from 'vuex';
 
-import Navbar from '@atoms/Navbar';
-import Players from '@molecules/Players';
+import Navbar from '../atoms/Navbar.vue';
+import Players from '../molecules/Players.vue';
 
 export default {
   name: 'TicTacVue',

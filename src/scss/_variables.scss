@@ -10,6 +10,6 @@ $cell-width: 150px;
 $cell-height: $cell-width;
 $cell-border: #EEEEEE;
 $cell-background: $color-white;
-$toggle-font-size: #{((strip-units($cell-width) / 2) / 10) - 0.25}rem;
+$toggle-font-size: 7.25rem;
 
-$container-width: #{(strip-units($cell-width) * 3)}px;
+$container-width: 450px;

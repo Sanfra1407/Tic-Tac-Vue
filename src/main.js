@@ -1,13 +1,11 @@
-import Vue from "vue";
-import router from "./router";
+import { createApp } from 'vue';
+import App from './components/pages/App.vue';
+import router from './router';
 import store from "./store";
-import TicTacVue from "./TicTacVue";
 
-Vue.config.productionTip = false;
+const app = createApp(App);
 
-new Vue({
-  el: '#tic-tac-vue',
-  router,
-  store,
-  render: h => h(TicTacVue)
-});
+app.use(router);
+app.use(store);
+
+app.mount('#tic-tac-vue');

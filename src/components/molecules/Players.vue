@@ -44,7 +44,7 @@
 
 <script>
 import { mapMutations } from 'vuex';
-import Title from '@atoms/Title';
+import Title from '../atoms/Title.vue';
 
 export default {
   name: 'Players',

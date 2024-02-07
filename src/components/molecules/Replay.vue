@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Cells from './Cells';
-import Footer from '@atoms/Footer';
+import Cells from './Cells.vue';
+import Footer from '../atoms/Footer.vue';
 
 export default {
   name: 'Replay',

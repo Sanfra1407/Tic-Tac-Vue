@@ -1,12 +1,9 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Game from '@pages/Game';
-const GameHistory = () => import('@pages/GameHistory');
+import { createRouter, createWebHistory } from 'vue-router'
+import Game from './components/pages/Game.vue';
+const GameHistory = () => import('./components/pages/GameHistory.vue');
 
-Vue.use(Router)
-
-export default new Router({
-  //mode: 'history', // Prevents /# in the URL.
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -20,3 +17,5 @@ export default new Router({
     }
   ]
 })
+
+export default router;

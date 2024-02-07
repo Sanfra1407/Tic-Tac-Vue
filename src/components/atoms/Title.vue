@@ -1,8 +1,8 @@
-<template functional>
+<template>
   <div class="page-title">
     <div class="container">
       <h1 class="is-title text--center">
-        <span v-if="props.label">{{ props.label }}</span>
+        <span v-if="label">{{ label }}</span>
         <slot v-else></slot>
       </h1>
     </div>
