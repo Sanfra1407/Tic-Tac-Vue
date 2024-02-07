@@ -1,7 +1,7 @@
 {
   "name": "tic-tac-vue",
   "description": "A simple Tic-Tac-Toe game written in Vue",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Giuseppe Sanfrancesco",
   "private": true,
   "type": "module",
