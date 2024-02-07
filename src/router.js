@@ -3,7 +3,7 @@ import Game from './components/pages/Game.vue';
 const GameHistory = () => import('./components/pages/GameHistory.vue');
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
