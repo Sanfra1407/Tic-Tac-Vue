@@ -11,8 +11,8 @@ const router = createRouter({
       component: Game,
     },
     {
-      path: '/history',
-      name: 'history',
+      path: '/game-history',
+      name: 'game-history',
       component: GameHistory,
     }
   ]
