@@ -5,7 +5,7 @@
         <span>Game</span>
       </router-link>
       <transition name="fade">
-        <router-link v-if="hasGameHistory" class="router-link" to="/history">
+        <router-link v-if="hasGameHistory" class="router-link" to="/game-history">
           <span>Game history</span>
         </router-link>
       </transition>

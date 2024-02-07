@@ -1,11 +1,9 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
 
-Vue.use(Vuex);
+import { createStore } from 'vuex'
 
 const emptyPositions = () => [null, null, null, null, null, null, null, null, null];
 
-export default new Vuex.Store({
+const store =  createStore({
   state: {
     player: "X",
     winner: null,
@@ -77,4 +75,6 @@ export default new Vuex.Store({
       commit('flushWinner')
     }
   }
-})
+});
+
+export default store;
