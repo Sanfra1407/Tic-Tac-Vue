@@ -8,7 +8,7 @@
   border-width: 1px;
   border-style: solid;
 
-  &[disabled="disabled"] {
+  &[disabled] {
     opacity: 0.8;
     cursor: not-allowed;
   }
