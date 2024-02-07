@@ -4,7 +4,7 @@
   .game {
     padding: 7px;
     list-style-type: none;
-    border: 1px solid $color_light_grey;
+    border: 1px solid var(--color__cell-border);
   
     + .game {
       border-top: 0;

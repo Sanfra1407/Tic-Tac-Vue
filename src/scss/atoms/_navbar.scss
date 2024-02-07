@@ -1,24 +1,23 @@
 .navbar {
   padding: 10px;
   margin-bottom: 15px;
-  background-color: $secondary_color;
+  background-color: var(--color__secondary);
 
   .router-link {
     margin-left: 5px;
     padding: 4px 8px;
     border-radius: 2px;
-    color: $color_white;
+    color: var(--color__white);
     display: inline-block;
     text-decoration: none;
     border-bottom: 2px solid;
-    border-color: rgba($color_white, 0); // For Safari compatibility
+    border-bottom: none;
 
     &:focus,
     &:hover,
     &-exact-active {
-      color: $secondary_color;
-      background-color: $color_white;
-      border-color: darken($color: $secondary_color, $amount: 7%);
+      color: var(--color__secondary);
+      background-color: var(--color__white);
     }
 
     &:first-child {

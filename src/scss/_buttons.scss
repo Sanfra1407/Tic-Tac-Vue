@@ -2,7 +2,7 @@
   font-size: 1rem;
   padding: 6px 10px;
   border-radius: 2px;
-  color: $color-white;
+  color: var(--color__white);
   outline: none;
   cursor: pointer;
   border-width: 1px;
@@ -19,21 +19,21 @@
 
   &--primary,
   &--error {
-    @include border-background($primary-color)
+    @include border-background(var(--color__primary));
   }
 
   &--secondary {
-    @include border-background($secondary-color)
+    @include border-background(var(--color__secondary));
   }
 
   &--golden {
-    color: $color-dark;
-    @include border-background($golden-color);
+    color: var(--color__dark);
+    @include border-background(var(--color__golden));
 
     &:hover {
       &::after {
         content: '';
-        color: red;
+        color: var(--color__primary);
       }
     }
   }

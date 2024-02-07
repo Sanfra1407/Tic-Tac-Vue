@@ -1,15 +1,15 @@
-$color-white: #FFFFFF;
-$color-dark: #000000;
-$color-light-grey: #EEEEEE;
-$primary-color: #E74C3C;
-$secondary-color: #4B7BEC;
-$golden-color: #FFD700;
+:root { 
+  --color__dark: #000000;
+  --color__white: #FFFFFF;
+  --color__primary: #E74C3C;
+  --color__secondary: #4B7BEC;
+  --color__golden: #FFD700;
 
-// Cell
-$cell-width: 150px;
-$cell-height: $cell-width;
-$cell-border: #EEEEEE;
-$cell-background: $color-white;
-$toggle-font-size: 7.25rem;
+  // Form
+  --color__form-border: #E0E0E0;
+  --color__form-placeholder: #D0D0D0;
 
-$container-width: 450px;
+  // Cell
+  --color__cell-bg: var(--color__white);
+  --color__cell-border: #EEEEEE;
+}
