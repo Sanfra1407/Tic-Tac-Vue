@@ -5,9 +5,9 @@
         <Title>Tic-Tac-Vue - Insert players</Title>
         <div class="form players is-full-width">
           <div class="player">
-            <label for="player-x" class="form__label">
-              <strong>Player X</strong>
-            </label>
+            <div class="player__mark player__mark--x">
+              <strong>X</strong>
+            </div>
             <input
               v-model="playerX"
               class="form__input"
@@ -17,9 +17,9 @@
             >
           </div>
           <div class="player">
-            <label for="player-o" class="form__label">
-              <strong>Player O</strong>
-            </label>
+            <div class="player__mark player__mark--o">
+              <strong>O</strong>
+            </div>
             <input
               v-model="playerO"
               class="form__input"

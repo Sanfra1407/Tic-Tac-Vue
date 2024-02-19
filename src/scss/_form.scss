@@ -22,10 +22,41 @@
     @include light-border();
 
     .player {
+      display: flex;
+      align-items: center;
       margin-bottom: 15px;
+
+      &__mark {
+        display: flex;
+        line-height: 1;
+        min-width: 30px;
+        padding: 9px 10px;
+        border: 1px solid;
+        border-right: none;
+        border-radius: 2px;
+        font-size: 1.25rem;
+        justify-content: center;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-color: var(--color__form-border);
+        box-shadow: inset 0 0 1px var(--color__form-border);
+
+        &--o {
+          color: var(--color__secondary);
+        }
+
+        &--x {
+          color: var(--color__primary);
+        }
+      }
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      .form__input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0
       }
     }
   }
