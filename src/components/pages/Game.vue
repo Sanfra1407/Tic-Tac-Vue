@@ -10,7 +10,7 @@
               <strong>{{ getWinnerName }}</strong> wins!
             </span>
             <span v-else-if="!winner && hasEmptyCells">{{ getPlayerName }} plays!</span>
-            <span v-else>Draw!</span>
+            <span v-else>It's a draw!</span>
           </h3>
         </div>
         <div class="col">
