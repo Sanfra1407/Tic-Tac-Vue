@@ -1,14 +1,16 @@
 <template>
   <div id="tic-tac-vue">
-    <transition name="fade" mode="out-in" :duration=120>
+    <Transition name="fade" mode="out-in" :duration=120>
       <div class="page-wrapper" v-if="hasPlayers">
         <Navbar />
-        <transition name="fade" mode="out-in" :duration=120>
-          <router-view />
-        </transition>
+        <router-view v-slot="slotProps">
+          <Transition name="fade" mode="out-in" :duration=120>
+            <component :is="slotProps.Component"></component>
+          </Transition>
+        </router-view>
       </div>
       <Players v-else />
-    </transition>
+    </Transition>
   </div>
 </template>
 

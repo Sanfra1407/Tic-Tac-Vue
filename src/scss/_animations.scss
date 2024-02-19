@@ -14,7 +14,7 @@
     transition: opacity .6s;
   }
 
-  &-enter,
+  &-enter-from,
   &-leave-to {
     opacity: 0;
   }
