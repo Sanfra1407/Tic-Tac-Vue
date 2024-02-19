@@ -54,8 +54,8 @@ export default {
 
   data() {
     return {
-      playerO: '',
-      playerX: ''
+      playerX: 'Player 1',
+      playerO: 'Player 2',
     };
   },
 
